@@ -207,7 +207,7 @@ function Menu:get_window_opts(height, width)
   local max_height = H.window_get_max_height()
 
   local current_tabpage = vim.api.nvim_get_current_tabpage()
-  local root_win = vim.api.nvim_tabpage_list_wins(current_tabpage)[1]
+  local root_win = vim.api.nvim_tabpage_list_wins(current_tabpage)[0]
   local max_width = vim.fn.winwidth(root_win)
 
   if pos == "topleft" then
